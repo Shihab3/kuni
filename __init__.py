@@ -1,4 +1,5 @@
-import os, pickle
+import pickle
+
 class ReadWrite:
     def __init__(self): pass
     def SearchLine(Path:str, line:str):
@@ -53,11 +54,3 @@ class ReadWrite:
         data = pickle.load(f)
         f    . close()
         return data
-
-def ConvertToRealPath(path:str):
-    if os.path.exists(path): return path
-    else:
-        if os.path.exists(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),path)):
-            return os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),path)
-        else:
-            raise ValueError("invalid Path!")
