@@ -1,2 +1,2 @@
 # kuni
-Small library that can read/write files and do some os stuff.
+VERY Small library that can read/write files in binary and text data.
